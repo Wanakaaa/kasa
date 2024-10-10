@@ -1,0 +1,27 @@
+.footer-container {
+    background: $blackColor;
+    color: $whiteColor;
+    width: 100%;
+    align-self: flex-end;
+    padding: 30px 0 30px 0;
+    @include flex(column);
+    align-items: center;
+    justify-content: center;
+
+    .footer-logo {
+        width: 122px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    @include mobile {
+        height: 209px;
+        .footer-copyright {
+            font-size: 0.75rem;
+            margin: 0;
+        }
+    }
+}
+
+
+

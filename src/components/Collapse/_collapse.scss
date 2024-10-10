@@ -1,0 +1,77 @@
+@import "../../styles/Variables.scss";
+
+.collapse-container {
+    @include flex(column);
+    height: 100%;
+
+    .collapse-title {
+        @include flex(row);
+        justify-content: space-between;
+        background: $redColor;
+        color: $whiteColor;
+        font-weight: 700;
+        border-radius: 5px;
+        padding: 10px;
+        .about-collapse {
+            font-size: 1.5rem;
+        }
+        .listing-title-collapse{
+            font-size: 1.125rem;
+        }
+        img {
+            cursor: pointer;
+        }
+        .chevron {
+            cursor: pointer;
+            transition: transform 0.5s ease;
+        }
+        .chevron-rotated {
+            transform: rotate(-180deg);
+        }
+    }
+
+    .collapse-item {
+        transform-origin: center top ;
+        height: 100%;
+        background: $beigeColor;
+        padding: 25px 20px;
+        border-radius: 0 0 5px 5px;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .dropdown-open {
+        display: block;
+        animation: open 0.3s ease-in-out forwards;
+    }
+
+
+    @keyframes open{
+        0%{
+            transform: scaleY(0);
+            max-height: 0px;
+        }
+        100%{
+            transform: scaleY(1);
+            max-height: 300px;
+        }
+    }
+
+
+    @include mobile {
+        .collapse-title {
+            .about-collapse {
+                font-size: 0.8125rem;
+            }
+            .listing-title-collapse {
+                font-size: 0.8125rem;
+            }
+        }
+        .collapse-item {
+            font-size: 0.75rem;
+            padding: 13px 20px;
+        }
+    }
+}

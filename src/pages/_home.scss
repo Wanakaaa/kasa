@@ -1,0 +1,41 @@
+.main-container {
+    flex: 1;
+}
+
+.home-container {
+    width: 100%;
+    @include flex(column);
+    gap: 43px;
+
+    .banner-section{
+        height: 223px;
+        width: 100%;
+    }
+
+    .listings-section{
+        background: $beigeColor;
+        border-radius: 25px;
+    }
+
+    @include mobile {
+        gap: 20px;
+
+        .banner-section {
+            height: 111px;
+        }
+
+    }
+
+    @include medium {
+        gap: 20px;
+        .banner-section {
+            height: 150px;
+        }
+        .listings-section{
+            background: $whiteColor;
+        }
+    }
+}
+
+
+

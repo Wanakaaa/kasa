@@ -1,0 +1,40 @@
+.about-container {
+    width: 100%;
+    @include flex(column);
+    justify-content: space-around;
+    gap: 20px;
+
+    .banner-section{
+        height: 223px;
+        width: 100%;
+    }
+
+    .about-section{
+        ul {
+            padding-left: 10%;
+            padding-right: 10%;
+            @include flex(row);
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: normal;
+            gap: 30px;
+        }
+    }
+
+    @include mobile {
+        height: 100%;    
+
+        .banner-section {
+            height: 111px;
+        }
+
+        .about-section {
+            ul {
+            width: 100%;
+            padding: 0;
+            }
+        }
+
+    }
+}
+

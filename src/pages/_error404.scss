@@ -1,0 +1,36 @@
+.error-container {
+    width: 100%;
+    @include flex(column);
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+        margin: 0;
+        font-size: 18rem;
+        color: $redColor;
+    }
+
+    p {
+        margin: 0;
+        font-size: 2.25rem;
+        color: $redColor;
+    }
+
+    a {
+        font-size: 1.125rem;
+        color: $blackColor;
+    }
+
+    @include mobile {
+        h1 {
+            font-size: 6rem;
+        }
+        p {
+            font-size: 1.125rem;
+        }
+        a {
+            font-size: 0.875rem;
+        }
+    }
+}

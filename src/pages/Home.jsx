@@ -1,9 +1,24 @@
-import '../App.css';
+import React from 'react'
+import Banner from '../components/Banner/Banner'
+import Listings from '../components/Listings/Listings'
+import bannerImage from "../assets/bannerHome.png"
 
-export default function Home() {
-    return (
-    <div className="App">
-        Testy test!
+function Home() {
+  const bannerText= 'Chez vous,\npartout et ailleurs'
+
+  return (
+    <div className='home-container'>
+      <section className='banner-section'>
+        <Banner 
+        image={bannerImage}
+        text={bannerText}
+        />
+      </section>
+      <section className='listings-section'>
+        <Listings />
+      </section>
     </div>
-    )
+  )
 }
+
+export default Home
