@@ -1,5 +1,5 @@
 import React from 'react'
-// import Navbar from '../Header/Navbar/Navbar'
+import Navbar from '../Header/Navbar/Navbar'
 import logoHeader from '../../assets/LogoHeader.png'
 import { Link } from 'react-router-dom';
 
@@ -14,9 +14,9 @@ function Header() {
             className='logo'></img>
       </Link>
         
-      {/* <Navbar
+      <Navbar
       className='nav'
-      /> */}
+      />
     </div>
   )
 }
