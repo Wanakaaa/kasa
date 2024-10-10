@@ -1,0 +1,43 @@
+.header-container {
+    width: 100%;
+    @include flex(row);
+    justify-content: space-between;
+    align-items: normal;
+
+    .nav {
+        @include flex(row);
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        gap: 57px;
+
+        a {
+            text-decoration: none;
+        }
+
+        a.active {
+            text-decoration: underline;
+        }
+    }
+    
+    @include mobile {
+        
+        .logo {
+            // border: 2px solid blue;
+            width: 145px;
+            height: 46px;
+        }
+        .nav {
+            gap: 20px;
+            
+            a {
+            // border: 2px solid green;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 500;
+            width: 56%;
+            white-space: nowrap;
+            }
+        }
+    }
+}
